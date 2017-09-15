@@ -19,11 +19,11 @@ AM_PATH_PYTHON([2.7])
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile])
-AC_CONFIG_FILES([src/Makefile])
+AC_CONFIG_FILES([alexapi/Makefile])
 
-AC_CONFIG_FILES([src/alexapi/Makefile])
+AC_CONFIG_FILES([lib/Makefile])
 
-AC_CONFIG_FILES([src/alexapi/device_platforms/Makefile])
-AC_CONFIG_FILES([src/alexapi/playback_handlers/Makefile])
-AC_CONFIG_FILES([src/alexapi/triggers/Makefile])
+AC_CONFIG_FILES([lib/device_platforms/Makefile])
+AC_CONFIG_FILES([lib/playback_handlers/Makefile])
+AC_CONFIG_FILES([lib/triggers/Makefile])
 AC_OUTPUT
