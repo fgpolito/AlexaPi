@@ -8,3 +8,26 @@ src/config.yaml
 
 # Mac stuff
 *DS_Store
+
+Makefile.in
+Makefile
+
+alexapi/Makefile.in
+alexapi/Makefile
+
+autom4te.cache/**
+configure
+lib/Makefile.in
+lib/Makefile
+
+lib/device_platforms/Makefile.in
+lib/device_platforms/Makefile
+
+lib/playback_handlers/Makefile.in
+lib/playback_handlers/Makefile
+
+lib/triggers/Makefile.in
+lib/triggers/Makefile
+
+config.log
+config.status
