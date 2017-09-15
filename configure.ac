@@ -23,4 +23,7 @@ AC_CONFIG_FILES([src/Makefile])
 
 AC_CONFIG_FILES([src/alexapi/Makefile])
 
+AC_CONFIG_FILES([src/alexapi/device_platforms/Makefile])
+AC_CONFIG_FILES([src/alexapi/playback_handlers/Makefile])
+AC_CONFIG_FILES([src/alexapi/triggers/Makefile])
 AC_OUTPUT
