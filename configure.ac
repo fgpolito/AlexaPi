@@ -19,7 +19,9 @@ AM_PATH_PYTHON([2.7])
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile])
+
 AC_CONFIG_FILES([alexapi/Makefile])
+AC_CONFIG_FILES([alexapi/AlexaPi.service])
 
 AC_CONFIG_FILES([lib/Makefile])
 

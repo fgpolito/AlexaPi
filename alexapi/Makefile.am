@@ -1,6 +1,6 @@
 EXTRA_DIST = \
 		requirements.txt \
-		dev-requirements.txt \
+		dev-requirements.txt
 
 # alexapi executable as python script
 
