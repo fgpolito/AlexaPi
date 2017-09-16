@@ -5,3 +5,7 @@ EXTRA_DIST = \
 # alexapi executable as python script
 
 dist_bin_SCRIPTS = AlexaPi
+
+servicedir = ${libdir}/systemd/system
+
+service_DATA = AlexaPi.service

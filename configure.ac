@@ -3,6 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([AlexaPi], [1.0], [https://github.com/alexa-pi/AlexaPi])
+AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE
 # Checks for programs.
@@ -28,4 +29,7 @@ AC_CONFIG_FILES([lib/Makefile])
 AC_CONFIG_FILES([lib/device_platforms/Makefile])
 AC_CONFIG_FILES([lib/playback_handlers/Makefile])
 AC_CONFIG_FILES([lib/triggers/Makefile])
+
+AX_LOCAL_EXPAND_CONFIG()
+
 AC_OUTPUT
