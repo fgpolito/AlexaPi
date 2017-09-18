@@ -31,3 +31,10 @@ lib/triggers/Makefile
 
 config.log
 config.status
+aclocal.m4
+compile
+install-sh
+missing
+py-compile
+alexapi/AlexaPi.service
+lib/config.py
