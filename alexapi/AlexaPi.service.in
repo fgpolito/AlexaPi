@@ -11,7 +11,7 @@ After=network.target network-online.target sound.target
 
 [Service]
 Type=simple
-ExecStart=@BINDIR@/AlexaPi --daemon
+ExecStart=@bindir@/AlexaPi --daemon
 
 User=alexapi
 Group=alexapi
@@ -19,7 +19,7 @@ Group=alexapi
 ProtectHome=true
 RuntimeDirectory=AlexaPi
 RuntimeDirectoryMode=0770
-WorkingDirectory=@RUNDIR@/AlexaPi
+WorkingDirectory=@rundir@/AlexaPi
 
 [Install]
 WantedBy=default.target
