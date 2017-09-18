@@ -1,9 +1,9 @@
-ALEXAPI_SRCS =	capture.py \
+ALEXAPI_SRCS = 	capture.py \
 		config.py \
 		constants.py \
 		exceptions.py \
-		__init__.py \
-		tunein.py
+		tunein.py \
+		__init__.py
 
 EXTRA_DIST = config.py.in
 

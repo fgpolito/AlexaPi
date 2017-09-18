@@ -21,7 +21,6 @@ AM_PATH_PYTHON([2.7])
 AC_CONFIG_FILES([Makefile])
 
 AC_CONFIG_FILES([alexapi/Makefile])
-
 AC_CONFIG_FILES([lib/Makefile])
 
 AC_CONFIG_FILES([lib/device_platforms/Makefile])
