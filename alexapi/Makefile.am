@@ -31,3 +31,8 @@ AlexaPi.service : Makefile
 	$(edit) '$(srcdir)/$@.in' >$@.tmp
 	mv $@.tmp $@
 
+# configuration file
+
+pkgsysconfdir = ${sysconfdir}/AlexaPi
+
+pkgsysconf_DATA = config.yaml
