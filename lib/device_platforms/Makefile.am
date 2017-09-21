@@ -7,8 +7,9 @@ ALEXAPI_DEVICE_PLATFORM_SRCS =	baseplatform.py \
 				magicmirrorplatform.py \
 				serialplatform.py \
 				dummyplatform.py \
-				orangepiplatform.py \
-				__init__.py
+				orangepiplatform.py
 
 alexapideviceplatformdir = $(pythondir)/alexapi/device_platforms
 alexapideviceplatform_PYTHON = ${ALEXAPI_DEVICE_PLATFORM_SRCS};
+
+alexapideviceplatform_DATA = __init__.py

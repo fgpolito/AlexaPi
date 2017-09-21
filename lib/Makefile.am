@@ -1,14 +1,15 @@
-ALEXAPI_SRCS = 	capture.py \
+ALEXAPI_SRCS =	capture.py \
 		config.py \
 		constants.py \
 		exceptions.py \
-		tunein.py \
-		__init__.py
+		tunein.py
 
 EXTRA_DIST = config.py.in
 
 alexapidir = $(pythondir)/alexapi
 alexapi_PYTHON = ${ALEXAPI_SRCS};
+
+alexapi_DATA = __init__.py
 
 SUBDIRS = device_platforms playback_handlers triggers
 
