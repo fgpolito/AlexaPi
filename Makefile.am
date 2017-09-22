@@ -1,5 +1,5 @@
 #top level src dir contains python distribution
-SUBDIRS = alexapi lib
+SUBDIRS = alexapi lib resources
 
 #add extra file to distribution archive
 EXTRA_DIST = \
