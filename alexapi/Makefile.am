@@ -5,7 +5,7 @@ EXTRA_DIST = \
 
 # alexapi, alexaauth executable as python script
 
-dist_bin_SCRIPTS = AlexaPi AlexaAuth
+dist_bin_SCRIPTS = AlexaPi AlexaAuth gpio
 
 servicedir = ${libdir}/systemd/system
 

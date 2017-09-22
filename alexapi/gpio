@@ -1,0 +1,47 @@
+#!/bin/sh
+
+BASE_PATH="/sys/class/gpio"
+
+EXPORT_FILE="export"
+UNEXPORT_FILE="unexport"
+
+BUTTON_1="18"
+LED_1="23"
+LED_2="24"
+LED_3="25"
+
+#unexport the required GPIOs (reset)
+echo ${BUTTON_1} > 	${BASE_PATH}/${UNEXPORT_FILE}
+echo ${LED_1} > 	${BASE_PATH}/${UNEXPORT_FILE}
+echo ${LED_2} > 	${BASE_PATH}/${UNEXPORT_FILE}
+echo ${LED_3} > 	${BASE_PATH}/${UNEXPORT_FILE}
+#export the required GPIOs
+echo "Enabling GPIOs..."
+
+echo ${BUTTON_1} > 	${BASE_PATH}/${EXPORT_FILE}
+echo ${LED_1} > 	${BASE_PATH}/${EXPORT_FILE}
+echo ${LED_2} > 	${BASE_PATH}/${EXPORT_FILE}
+echo ${LED_3} > 	${BASE_PATH}/${EXPORT_FILE}
+
+#set directions
+echo "Configuring GPIOs..."
+
+echo in > ${BASE_PATH}/gpio${BUTTON_1}/direction
+echo out > ${BASE_PATH}/gpio${LED_1}/direction
+echo out > ${BASE_PATH}/gpio${LED_2}/direction
+echo out > ${BASE_PATH}/gpio${LED_3}/direction
+
+echo "GPIO configuration completed."
+
+echo "Press the button on the breadboard..."
+
+while true;
+do
+BTN_IN=$(cat ${BASE_PATH}/gpio${BUTTON_1}/value)
+
+echo ${BTN_IN} > ${BASE_PATH}/gpio${LED_1}/value
+echo ${BTN_IN} > ${BASE_PATH}/gpio${LED_2}/value
+echo ${BTN_IN} > ${BASE_PATH}/gpio${LED_3}/value
+
+sleep 0.1
+done
