@@ -16,6 +16,7 @@ service_DATA = AlexaPi.service
 edit = 	sed \
 	-e 's|@bindir[@]|$(bindir)|g' \
 	-e 's|@datadir[@]|$(datadir)|g' \
+	-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
 	-e 's|@libdir[@]|$(libdir)|g' \
 	-e 's|@libexecdir[@]|$(libexecdir)|g' \
 	-e 's|@localstatedir[@]|$(localstatedir)|g' \
@@ -26,7 +27,7 @@ edit = 	sed \
 	-e 's|@sysconfdir[@]|$(sysconfdir)|g'
 
 
-AlexaPi.service : Makefile
+AlexaPi.service AlexaPi : Makefile
 	rm -f $@ $@.tmp
 	$(edit) '$(srcdir)/$@.in' >$@.tmp
 	mv $@.tmp $@

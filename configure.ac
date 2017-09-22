@@ -22,6 +22,7 @@ AC_CONFIG_FILES([Makefile])
 
 AC_CONFIG_FILES([alexapi/Makefile])
 AC_CONFIG_FILES([lib/Makefile])
+AC_CONFIG_FILES([resources/Makefile])
 
 AC_CONFIG_FILES([lib/device_platforms/Makefile])
 AC_CONFIG_FILES([lib/playback_handlers/Makefile])

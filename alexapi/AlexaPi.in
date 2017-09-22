@@ -202,7 +202,7 @@ pHandler = cl(config, playback_callback)
 player = Player(config, platform, pHandler)
 
 
-path = '@datadir@'
+path = '@pkgdatadir@'
 resources_path = os.path.join(path, 'resources', '')
 tmp_path = os.path.join(tempfile.mkdtemp(prefix='AlexaPi-runtime-'), '')
 
