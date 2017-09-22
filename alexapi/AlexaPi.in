@@ -13,7 +13,7 @@ import json
 import optparse
 import email
 import subprocess
-from future.builtins import bytes
+from __builtin__ import bytes
 
 import yaml
 import requests
