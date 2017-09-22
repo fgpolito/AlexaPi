@@ -313,7 +313,7 @@ def alexa_speech_recognizer_generate_data(audio, boundary):
 		}
 	}
 
-	yield bytes(chunk + json.dumps(data) + '\r\n', 'utf8')
+	yield bytes(chunk + json.dumps(data) + '\r\n')
 
 	chunk = '--%s\r\n' % boundary
 	chunk += (
@@ -321,12 +321,12 @@ def alexa_speech_recognizer_generate_data(audio, boundary):
 		'Content-Type: audio/L16; rate=16000; channels=1\r\n\r\n'
 	)
 
-	yield bytes(chunk, 'utf8')
+	yield bytes(chunk)
 
 	for audio_chunk in audio:
 		yield audio_chunk
 
-	yield bytes('--%s--\r\n' % boundary, 'utf8')
+	yield bytes('--%s--\r\n' % boundary)
 	logger.debug('Finished sending speech to Alexa Voice Service')
 
 	platform.indicate_processing()
@@ -427,7 +427,7 @@ def process_response(response):
 
 	if response.status_code == 200:
 		try:
-			data = bytes("Content-Type: ", 'utf-8') + bytes(response.headers['content-type'], 'utf-8') + bytes('\r\n\r\n', 'utf-8') + response.content
+			data = bytes("Content-Type: ") + bytes(response.headers['content-type']) + bytes('\r\n\r\n') + response.content
 			msg = email.message_from_bytes(data) # pylint: disable=no-member
 		except AttributeError:
 			data = "Content-Type: " + response.headers['content-type'] + '\r\n\r\n' + response.content
