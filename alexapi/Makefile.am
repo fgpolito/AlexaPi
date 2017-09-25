@@ -5,11 +5,11 @@ EXTRA_DIST = \
 
 # alexapi, alexaauth executable as python script
 
-dist_bin_SCRIPTS = AlexaPi AlexaAuth gpio
+dist_bin_SCRIPTS = AlexaPi AlexaAuth AlexaCustomSkill gpio
 
 servicedir = ${libdir}/systemd/system
 
-service_DATA = AlexaPi.service
+service_DATA = AlexaPi.service AlexaCustomSkill.service
 
 # rules for generating files after evaluating automake variables
 
@@ -27,7 +27,7 @@ edit = 	sed \
 	-e 's|@sysconfdir[@]|$(sysconfdir)|g'
 
 
-AlexaPi.service AlexaPi : Makefile
+AlexaPi.service AlexaCustomSkill.service AlexaPi : Makefile
 	rm -f $@ $@.tmp
 	$(edit) '$(srcdir)/$@.in' >$@.tmp
 	mv $@.tmp $@

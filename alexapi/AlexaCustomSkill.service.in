@@ -1,0 +1,10 @@
+[Unit]
+Description=Alexa Skill Kit example service
+Documentation=http://www.instructables.com/id/Control-Raspberry-Pi-GPIO-With-Amazon-Echo-and-Pyt/
+
+Requires=sound.target
+After=network.target network-online.target sound.target
+
+[Service]
+Type=simple
+ExecStart=@bindir@/AlexaCustomSkill
