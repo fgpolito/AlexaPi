@@ -7,7 +7,7 @@ ALEXAPI_SRCS =	capture.py \
 EXTRA_DIST = config.py.in
 
 alexapidir = $(pythondir)/alexapi
-alexapi_PYTHON = ${ALEXAPI_SRCS};
+alexapi_PYTHON = ${ALEXAPI_SRCS}
 
 alexapi_DATA = __init__.py
 

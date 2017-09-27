@@ -3,6 +3,6 @@ ALEXAPI_PLAYBACK_HANDLERS_SRCS = 	basehandler.py \
 					vlchandler.py
 
 alexapiplaybackhandlersdir = $(pythondir)/alexapi/playback_handlers
-alexapiplaybackhandlers_PYTHON = ${ALEXAPI_PLAYBACK_HANDLERS_SRCS};
+alexapiplaybackhandlers_PYTHON = ${ALEXAPI_PLAYBACK_HANDLERS_SRCS}
 
 alexapiplaybackhandlers_DATA = __init__.py
